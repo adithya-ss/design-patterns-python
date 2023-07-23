@@ -8,10 +8,16 @@ class Journal:
         self.count = 0
     
     def add_entry(self, text):
+        """
+        Method to add a journal entry
+        """
         self.count += 1
         self.entries.append(f'Entry Number {self.count}: {text}')
     
     def remove_entry(self, position):
+        """
+        Method to remove a journal entry
+        """
         del self.entries[position]
     
     def __str__(self):
@@ -27,12 +33,16 @@ class Journal:
     #     file.write(str(self))
     #     file.close()
     
+
 class PersitanceManager:
     """
     The responsibility of this class is to saving the object to a file.
     """
     @staticmethod
     def save_entry_to_file(journal, filename):
+        """
+        Method to save journal entries into a file.
+        """
         file = open(filename, 'w')
         file.write(str(journal))
         file.close()
