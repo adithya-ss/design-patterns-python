@@ -10,3 +10,8 @@ Ex: God object: Everything in the same class
 - OPEN for extension CLOSED for modification.
 - Enterprise pattern: Specification
 - Combinator: Combination of multiple structures
+
+# Liskov Substitution Principle:
+- Use properties instead of exposing attributes
+- Whenever there is an interface taking some sort of a base class, we should be able to stick in any of its inheriters and expect nothing to break.
+- Any inheritance model that adheres to the Liskov Substitution Principle will implicitly follow the Open/Closed principle.
