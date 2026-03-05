@@ -23,3 +23,4 @@ Ex: God object: Everything in the same class
 # Dependency Inversion Principle:
 - This does not relate to dependency injection. Both are different.
 - High level classes/modules should not depend on low-level modules, but should depend on the abstractions (Interfaces).
+- In our example, for cases like unit testing, there is no need to go into something like a database. We could rather have an in-memory storage, by using the same interface to build another class - Data in-memory and exposed to the unit tests.
