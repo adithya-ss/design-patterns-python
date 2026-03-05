@@ -53,14 +53,14 @@ class ResearchWithoutDIP:
         relations = relationships.relations
         for r in relations:
             if r[0].name == 'John' and r[1] == Relationship.PARENT:
-                print(f"John has a child named {r[2].name}")
+                print(f"Without DIP <From {self.__class__.__name__}>: John has a child named {r[2].name}")
 
 # This is still a high-level module, but it now depends on the abstraction (RelationshipBrowser) rather than the concrete 
 # implementation (Relationships).
 class ResearchWithDIP:
     def __init__(self, browser):
         for p in browser.find_all_children_of('John'):
-            print(f"John has a child named {p}")
+            print(f"With DIP <{self.__class__.__name__}>: John has a child named {p}")
 
 if __name__ == '__main__':
     parent = Person('John')
