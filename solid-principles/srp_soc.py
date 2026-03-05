@@ -1,5 +1,10 @@
 import os
 
+"""
+SRP: Single Responsibility Principle
+SOC: Separation of Concerns
+"""
+
 class Journal:
     """
     The primary responsibility of this Journal class is to either add or remove an entry
