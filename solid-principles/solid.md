@@ -15,3 +15,11 @@ Ex: God object: Everything in the same class
 - Use properties instead of exposing attributes
 - Whenever there is an interface taking some sort of a base class, we should be able to stick in any of its inheriters and expect nothing to break.
 - Any inheritance model that adheres to the Liskov Substitution Principle will implicitly follow the Open/Closed principle.
+
+# Interface Segregration Principle:
+- Have interfaces with defined responsibilities/specific functions, instead of having a big list of features/functions which might not be used by other classes which implement it.
+- We can also use compositions, to acheive the segreation of interfaces.
+
+# Dependency Inversion Principle:
+- This does not relate to dependency injection. Both are different.
+- High level classes/modules should not depend on low-level modules, but should depend on the abstractions (Interfaces).
