@@ -1,3 +1,5 @@
+import os
+
 class Journal:
     """
     The primary responsibility of this Journal class is to either add or remove an entry
@@ -54,7 +56,7 @@ if __name__ == "__main__":
     journal_obj.add_entry('Patience is virtue.')
     print(f'Below are the journal entries: \n{journal_obj}')
 
-    filename = r'C:\01_Data_Adithya\Practice_Code\Design_Patterns_Python\design-patterns-python\solid-principles\journal_entries.txt'
+    filename = f"{os.getcwd()}/srp_soc_journal_entries.txt"
     PersitanceManager.save_entry_to_file(journal=journal_obj, filename=filename)
     with open(filename) as j_entries:
         print(f'\nNow printing the journal entries from the file... \n{j_entries.read()}')
