@@ -45,11 +45,11 @@ class HtmlBuilder:
         return str(self.__root)
 
 if __name__ == '__main__':
-    # builder = HtmlBuilder('ul')
-    # builder.add_child('li', 'hello')
-    # builder.add_child('li', 'world')
-    # print('Ordinary Builder:')
-    # print(builder)
+    builder = HtmlBuilder('ul')
+    builder.add_child('li', 'hello')
+    builder.add_child('li', 'world')
+    print('Ordinary Builder:')
+    print(builder)
     # ---
     builder = HtmlElement.create('ul')
     builder.add_child_fluent('li', 'hello').add_child_fluent('li', 'world')
